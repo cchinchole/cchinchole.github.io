@@ -1,0 +1,53 @@
+:root {
+  /* Dark theme variables */
+  --bg: #0b1220;
+  --text: #e6eef6;
+  --muted: #9aa6b2;
+  --link: #6ea8ff;
+  --code-bg: #0f1724;
+  --card-bg: #07101a;
+  --border: rgba(255,255,255,0.06);
+}
+
+/* Force dark-mode values even if user prefers light */
+html, body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* Core layout elements — adjust selectors to match Lagrange markup */
+.site, .page, .post, .container, .content, .card, .sidebar {
+  background: var(--card-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* Links */
+a, a:visited {
+  color: var(--link) !important;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 { color: var(--text) !important; }
+
+/* Code blocks and inline code */
+pre, code, .highlight, .hljs {
+  background: var(--code-bg) !important;
+  color: var(--text) !important;
+  border-radius: 6px;
+}
+
+/* Tables, blockquotes, hr */
+table { background: transparent !important; color: var(--text) !important; }
+blockquote { border-left-color: var(--border) !important; color: var(--muted) !important; }
+hr { border-color: var(--border) !important; }
+
+/* Images: keep original colors; optionally add subtle border */
+img { background: transparent; border: 1px solid rgba(255,255,255,0.03); }
+
+/* If the theme uses specific classes for header/footer, override them too */
+.header, .site-header, .footer, .site-footer {
+  background: var(--card-bg) !important;
+  color: var(--text) !important;
+}
+
